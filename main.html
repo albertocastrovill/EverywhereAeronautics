@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everywhere Aeronautics</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu hoja de estilos -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Agregar efecto al hacer clic en los enlaces del menú
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetSection = document.querySelector(this.getAttribute("href"));
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div id="logo">
+            <img src="logo.png" alt="Logo de Everywhere Aeronautics">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenidos a Everywhere Aeronautics</h1>
+            <p>Revolutionando el transporte con drones de pasajeros.</p>
+        </div>
+    </section>
+
+    <!-- Sección Productos -->
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <p>Aquí encontrarás nuestra gama de drones innovadores diseñados para el transporte de pasajeros.</p>
+        <!-- Añadir productos con su descripción aquí -->
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Everywhere Aeronautics nace de la pasión por el transporte aéreo y la tecnología. Nuestra misión es hacer que el transporte sea más eficiente y sostenible.</p>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes preguntas o te gustaría trabajar con nosotros? Contáctanos:</p>
+        <address>
+            Dirección: 123 Calle Principal, Ciudad, País<br>
+            Teléfono: +1 234 567 890<br>
+            Email: <a href="mailto:info@everywhereaeronautics.com">info@everywhereaeronautics.com</a>
+        </address>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2023 Everywhere Aeronautics. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
